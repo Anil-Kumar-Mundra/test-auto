@@ -3,8 +3,9 @@
 import 'babel-polyfill';
 import { HomePage } from '../lib/homePage';
 import { SampleDemo } from '../lib/subPages/sampleDemo';
+import { assert } from 'chai';
 
-const assert = require('chai').assert;
+const addContext = require('mochawesome/addContext');
 
 const pageHome= new HomePage();
 const pageSampleDemo = new SampleDemo();
@@ -18,9 +19,10 @@ describe('Mocha is a test framework and chai is the assertion library', async fu
    });  
    
 
-   it('Verifying the homepage title',async () => {
+   it('Verifying the homepage title',async function() {
       let title = await pageHome.getTitle();
       assert.equal(title,`Selenium Easy - Best Demo website to practice Selenium Webdriver Online`);
+      addContext(this, 'simple string');
       
    });
    
@@ -38,7 +40,6 @@ describe('Mocha is a test framework and chai is the assertion library', async fu
    
    it("Display Message", (async () => {
       await pageSampleDemo.showMessage(); 
-      // assert.equal(message, 'My TextMy Text2');   
    }));
 
    it("Text verification", (async () => {
@@ -58,7 +59,7 @@ describe('Mocha is a test framework and chai is the assertion library', async fu
 
    it("verify total", (async () => {
       let value = await pageSampleDemo.getTotalValue(); 
-      assert.equal(value, (2 + 3));   
+      assert.equal(value, (21 + 3));   
    }));
 
 
