@@ -5,13 +5,19 @@ let results =
         {
             "testcase1" : [
                 {
-                "stepId": 101,
-                "stepType": "Application",
-                "stepMethod" : "setValue",
-                "stepInput"  : " Text Message ",
-                "locatorType" : "xpath",
-                "locatorValue" : "//*[@id='user-message']" }
-                    ]        },
+                    "stepId": [
+
+                       { "log1": 101 },
+                       { "log2": 101 }
+                    ],
+                    "stepType": "Application",
+                    "stepMethod" : "setValue",
+                    "stepInput"  : " Text Message ",
+                    "locatorType" : "xpath",
+                    "locatorValue" : "//*[@id='user-message']" 
+                }
+            ] 
+        },
 
     ]
 }
