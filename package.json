@@ -4,7 +4,8 @@
   "description": "continious test automation",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**.js --reporter mochawesome  --timeout 100000 --require babel-register"
+    "test": "mocha test/**.js --reporter mochawesome  --timeout 100000 --require babel-register",
+    "sonar-scanner":  "D:/sonar-scanner-3.3.0.1492-windows/bin/sonar-scanner.bat"
   },
   "author": "anil mundra",
   "license": "ISC",
