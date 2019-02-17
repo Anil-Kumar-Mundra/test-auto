@@ -38,7 +38,7 @@ describe('Mocha is a test framework and chai is the assertion library', async fu
 
    it("Enter the two numbers to get the toatl and verify", (async () => {
       let result = await pageSampleDemo.enterTwoNumberstoGetTotal(2, 3);  
-      assert.equal(result, (12 + 3));          
+      assert.equal(result, (2 + 3));          
    }));
 
         
