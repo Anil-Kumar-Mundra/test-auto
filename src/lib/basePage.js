@@ -40,7 +40,10 @@ function BasePage() {
     * Get title
     */
     this.getTitle = async () => await driver.getTitle().then((title) => title);
-
+     /*
+    * close
+    */
+   this.close = async () => await driver.quit();
      /*
     * Get text
     */
