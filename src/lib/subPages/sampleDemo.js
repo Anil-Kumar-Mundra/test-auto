@@ -15,15 +15,17 @@ const SampleDemo = function () {
     this.TotalValue = By.id(`displayvalue`);
     this.ageSelected = By.id(`isAgeSelected`);
     this.ageCheckboxMessage=By.id(`txtAge`);
-
-    this.findCheckbox = function(...dynamicValue) {
-        let arrObj = [];
-        for(let singleElement of dynamicValue) {
-            arrObj.push(By.xpath(`//label[text()="Option ${singleElement}"]/input[@type="checkbox"]`));
+    this.checkAll = By.id(`check1`);
+    this.findCheckbox = function(...elements) {
+        const testObj = [];
+        for(let elementValue of elements) {
+            testObj.push(By.xpath(`//label[text()="Option ${elementValue}"]/input[@type="checkbox"]`));
         }
-        return arrObj;
-
-    }
+        return testObj;
+    }  
+    this.radioButtonMale = By.xpath(
+    `/p[contains(text(),'Click on button')]/following-sibling::label[text()="Male"]/input[@value="Male"]
+    `); 
 }
 
 SampleDemo.prototype = Object.create(BasePage.prototype);
@@ -44,12 +46,22 @@ SampleDemo.prototype.clickCheckboxCaptureEventMessage = async function() {
     return await this.getText(this.ageCheckboxMessage);
 }
 
-SampleDemo.prototype.clickMultiCheckbox = async function() {
-    Array.from(this.findCheckbox(1,2,3,4), obj => this.clickWebElement(obj));
-
-    // // this.clickWebElement(Array.from(this.findCheckbox(1,2,3,4)));
-
-    // return await this.findCheckbox(1,2,3,4).map((obj) => this.clickWebElement(obj));
+SampleDemo.prototype.clickCheckAllCaptureEvent = async function() {
+    this.blnFlag = false;
+    await this.clickWebElement(this.checkAll);
+    for(let obj of this.findCheckbox(1,2,3,4)) {
+        await this.isSelected(obj)
+        .then((selected) => {
+            if (selected) {
+                this.blnFlag = true
+            } else {
+                this.blnFlag = false;
+            }
+        })
+        .catch((err) => console.error(err));       
+    }
+    
+    return this.blnFlag;
 }
 
 export  { SampleDemo }

@@ -59,8 +59,9 @@ function BasePage() {
     /* 
     * to get an element in web page
     */
-    this.getWebElement = objElement =>  driver.findElement(objElement);
-
+    this.getWebElement = async (objElement) =>  {
+        return await driver.findElement(objElement);
+    }
     /*
     * Get value
     */
@@ -77,9 +78,10 @@ function BasePage() {
     this.clickWebElement = async(...objElement) => {        
         
         this.methodFlag = false;
+        // console.log(objElement);
 
         try {             
-            for(let obj of objElement ) {
+            for(let obj of objElement ) {                
                 await this.getWebElement(obj)
                 .then(async (obj) => {
                     await obj.click()
@@ -114,7 +116,7 @@ function BasePage() {
 
         try {             
             for(let obj of objElement) {
-
+                
                 let objElement = obj[0];
                 let strText = obj[1];
 
@@ -143,7 +145,24 @@ function BasePage() {
             console.error(err);
         } 
         return this.methodFlag;
-    }    
+    } 
+    
+    /**
+     * 
+     */
+
+    this.isSelected = async(...objElement) => { 
+        for(let obj of objElement ) {                
+            return await this.getWebElement(obj)
+            .then(async (obj) => {
+                return await obj.isSelected();
+            })
+            .catch( (err) => {
+                console.log(err);                
+            });              
+        }
+    }
+    
 
 }).call(BasePage.prototype)
 
