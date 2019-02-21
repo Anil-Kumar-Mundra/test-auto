@@ -37,4 +37,5 @@ describe("Mocha is a test framework and chai is the assertion library", async fu
 
     await importTest("Test Suite Two", './module-one/sample-demo-test');
     await importTest("Test Suite One", './module-one/checkbox-demo-test');
+    await importTest("Test Suite One", './module-one/radiobutton-demo-test');
 });

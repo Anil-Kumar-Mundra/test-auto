@@ -10,7 +10,6 @@ const addContext = require('mochawesome/addContext');
 const pageHome= new HomePage();
 const pageSampleDemo = new SampleDemo();
 
-   
 it("Navigating to checkboc demo Page", (async () => {
    let blnMethod = await pageHome.navigateCheckboxDemo();
    assert.isTrue(blnMethod, 'Navigation falied');    
@@ -30,4 +29,3 @@ it("click on the uncheckall button and verify all the checkboxes are unselected"
    let blnMethod = await pageSampleDemo.clickCheckAllCaptureEvent();
    assert.isFalse(blnMethod, `Success - Check boxes are unselected`);
 }));
-

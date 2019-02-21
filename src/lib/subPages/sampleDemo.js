@@ -24,8 +24,10 @@ const SampleDemo = function () {
         return testObj;
     }  
     this.radioButtonMale = By.xpath(
-    `/p[contains(text(),'Click on button')]/following-sibling::label[text()="Male"]/input[@value="Male"]
+    `//p[contains(text(),'Click on button')]/following-sibling::label[text()="Male"]/input[@value="Male"]
     `); 
+    this.getCheckedValue = By.id(`buttoncheck`);
+    this.getRadioButtonMessage = By.xpath(`//p[contains(text(),'Male')]`);
 }
 
 SampleDemo.prototype = Object.create(BasePage.prototype);
@@ -64,4 +66,18 @@ SampleDemo.prototype.clickCheckAllCaptureEvent = async function() {
     return this.blnFlag;
 }
 
+SampleDemo.prototype.selectGenderRadioButton = async function() {
+    return await this.clickWebElement(this.radioButtonMale);
+}
+SampleDemo.prototype.clickOnGetCheckedValue = async function() {
+    return await this.clickWebElement(this.getCheckedValue);
+}
+SampleDemo.prototype.getRadioButtonStatus = async function() {
+    return await this.getText(this.getRadioButtonMessage);
+}
+SampleDemo.prototype.radioButtonDemo = async function() {
+    await this.selectGenderRadioButton();
+    await this.clickOnGetCheckedValue();
+    return await this.getRadioButtonStatus();
+}
 export  { SampleDemo }

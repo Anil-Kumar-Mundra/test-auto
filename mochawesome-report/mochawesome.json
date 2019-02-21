@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 3,
-    "tests": 7,
-    "passes": 7,
+    "suites": 4,
+    "tests": 9,
+    "passes": 9,
     "pending": 0,
     "failures": 0,
-    "start": "2019-02-21T07:00:36.158Z",
-    "end": "2019-02-21T07:00:42.595Z",
-    "duration": 6437,
-    "testsRegistered": 7,
+    "start": "2019-02-21T13:38:28.641Z",
+    "end": "2019-02-21T13:38:36.020Z",
+    "duration": 7379,
+    "testsRegistered": 9,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "2b6d62f3-c630-4351-9460-4a4362e8b01d",
+    "uuid": "09daf858-cf9c-4f09-9d48-51d602c79455",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "e1cb31e4-42a5-4d45-be9c-d4716a6c6daa",
+        "uuid": "6f0bab37-e4f1-49a2-834e-3e96f03ecc27",
         "title": "Mocha is a test framework and chai is the assertion library",
         "fullFile": "D:\\newJSTestAutomation\\testAuomationWithJS\\src\\test\\main-test-engine.js",
         "file": "\\src\\test\\main-test-engine.js",
@@ -37,14 +37,14 @@
             "title": "\"before all\" hook: Launching the home page",
             "fullTitle": "Mocha is a test framework and chai is the assertion library \"before all\" hook: Launching the home page",
             "timedOut": false,
-            "duration": 5081,
+            "duration": 5144,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
             "err": {},
             "isRoot": false,
-            "uuid": "20e647e3-be66-4831-b58a-ed4da3361fa5",
+            "uuid": "6eef8147-9864-4e6a-9877-f9a866b4daed",
             "isHook": true,
             "skipped": false
           },
@@ -52,7 +52,7 @@
             "title": "\"before all\" hook: Verifying the homepage title",
             "fullTitle": "Mocha is a test framework and chai is the assertion library \"before all\" hook: Verifying the homepage title",
             "timedOut": false,
-            "duration": 8,
+            "duration": 7,
             "pass": false,
             "fail": false,
             "pending": false,
@@ -60,7 +60,7 @@
             "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
             "err": {},
             "isRoot": false,
-            "uuid": "d62a4746-d944-437b-8b31-1d99a495d5f5",
+            "uuid": "1d2ca967-4eb4-4be7-a53c-19302f7f07aa",
             "isHook": true,
             "skipped": false
           }
@@ -77,7 +77,7 @@
             "code": "console.log(\"after all tests\");",
             "err": {},
             "isRoot": false,
-            "uuid": "4a5fcd64-6127-4edf-9022-fc0036b43b8a",
+            "uuid": "c80dd4f9-1416-4d60-b4a3-be6876582719",
             "isHook": true,
             "skipped": false
           }
@@ -85,7 +85,7 @@
         "tests": [],
         "suites": [
           {
-            "uuid": "96df2370-68df-4944-80cd-91afd1cba893",
+            "uuid": "796995c0-0de0-44ef-872e-8faa18b07eb1",
             "title": "Test Suite Two",
             "fullFile": "D:\\newJSTestAutomation\\testAuomationWithJS\\src\\test\\main-test-engine.js",
             "file": "\\src\\test\\main-test-engine.js",
@@ -96,7 +96,7 @@
                 "title": "Navigating to the Sample DemoPage",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library Test Suite Two Navigating to the Sample DemoPage",
                 "timedOut": false,
-                "duration": 341,
+                "duration": 494,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -105,7 +105,7 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "1fca2578-4999-4556-baab-467a32815fbd",
+                "uuid": "dd7a12f3-8bde-4be4-8781-14cee3ddb86b",
                 "isHook": false,
                 "skipped": false
               },
@@ -113,7 +113,7 @@
                 "title": "Enter the text in enter-message field and verify the message",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library Test Suite Two Enter the text in enter-message field and verify the message",
                 "timedOut": false,
-                "duration": 173,
+                "duration": 229,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -122,7 +122,7 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "5ee87da7-bf01-4cbb-b943-2e1ce4a4993e",
+                "uuid": "87191823-b609-4884-9e6b-7d9fcabaca23",
                 "isHook": false,
                 "skipped": false
               },
@@ -130,7 +130,7 @@
                 "title": "Enter the two numbers to get the toatl and verify",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library Test Suite Two Enter the two numbers to get the toatl and verify",
                 "timedOut": false,
-                "duration": 188,
+                "duration": 254,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -139,21 +139,21 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "84c119c3-57c3-4af5-801e-2e5a8317724c",
+                "uuid": "a4ea3b1b-e10d-4cce-8b4c-5e1c0fb9c281",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "1fca2578-4999-4556-baab-467a32815fbd",
-              "5ee87da7-bf01-4cbb-b943-2e1ce4a4993e",
-              "84c119c3-57c3-4af5-801e-2e5a8317724c"
+              "dd7a12f3-8bde-4be4-8781-14cee3ddb86b",
+              "87191823-b609-4884-9e6b-7d9fcabaca23",
+              "a4ea3b1b-e10d-4cce-8b4c-5e1c0fb9c281"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 702,
+            "duration": 977,
             "root": false,
             "rootEmpty": false,
             "_timeout": 100000
@@ -169,7 +169,7 @@
         "_timeout": 100000
       },
       {
-        "uuid": "24e26d00-f011-4e33-a32e-4b35d197af61",
+        "uuid": "0f954d31-ae6d-4bcb-8f50-f75b7196d783",
         "title": "Test Suite One",
         "fullFile": "D:\\newJSTestAutomation\\testAuomationWithJS\\src\\test\\main-test-engine.js",
         "file": "\\src\\test\\main-test-engine.js",
@@ -180,7 +180,7 @@
             "title": "Navigating to checkboc demo Page",
             "fullTitle": "Test Suite One Navigating to checkboc demo Page",
             "timedOut": false,
-            "duration": 289,
+            "duration": 358,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -189,7 +189,7 @@
             "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
             "err": {},
             "isRoot": false,
-            "uuid": "76599479-353a-41d6-94b9-f88f59d33f83",
+            "uuid": "0588e8bb-352a-47cb-8eec-2d1d4716adc3",
             "isHook": false,
             "skipped": false
           },
@@ -197,7 +197,7 @@
             "title": "click on the check box and verify the message",
             "fullTitle": "Test Suite One click on the check box and verify the message",
             "timedOut": false,
-            "duration": 93,
+            "duration": 90,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -206,7 +206,7 @@
             "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
             "err": {},
             "isRoot": false,
-            "uuid": "4135753e-baaf-4a2b-95b6-a14ccf5ee414",
+            "uuid": "b54ab067-b7d7-438c-92c3-2e3db7f7073b",
             "isHook": false,
             "skipped": false
           },
@@ -214,7 +214,7 @@
             "title": "click on the checkall button and verify all the checkboxes are selected",
             "fullTitle": "Test Suite One click on the checkall button and verify all the checkboxes are selected",
             "timedOut": false,
-            "duration": 144,
+            "duration": 172,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -223,7 +223,7 @@
             "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
             "err": {},
             "isRoot": false,
-            "uuid": "46d2d84b-ea33-4787-bcee-3d47fcfcb41f",
+            "uuid": "3df43f44-85ca-4529-8b38-97e53d8204bf",
             "isHook": false,
             "skipped": false
           },
@@ -231,7 +231,7 @@
             "title": "click on the uncheckall button and verify all the checkboxes are unselected",
             "fullTitle": "Test Suite One click on the uncheckall button and verify all the checkboxes are unselected",
             "timedOut": false,
-            "duration": 94,
+            "duration": 103,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -240,22 +240,78 @@
             "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
             "err": {},
             "isRoot": false,
-            "uuid": "9c5cd1de-722d-4156-be0c-e8aa0381e95a",
+            "uuid": "fef118d3-81e6-48a9-871a-897097aaad94",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "76599479-353a-41d6-94b9-f88f59d33f83",
-          "4135753e-baaf-4a2b-95b6-a14ccf5ee414",
-          "46d2d84b-ea33-4787-bcee-3d47fcfcb41f",
-          "9c5cd1de-722d-4156-be0c-e8aa0381e95a"
+          "0588e8bb-352a-47cb-8eec-2d1d4716adc3",
+          "b54ab067-b7d7-438c-92c3-2e3db7f7073b",
+          "3df43f44-85ca-4529-8b38-97e53d8204bf",
+          "fef118d3-81e6-48a9-871a-897097aaad94"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 620,
+        "duration": 723,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 100000
+      },
+      {
+        "uuid": "00a475ce-26a1-4dc7-ae9a-02a28ccf32e1",
+        "title": "Test Suite One",
+        "fullFile": "D:\\newJSTestAutomation\\testAuomationWithJS\\src\\test\\main-test-engine.js",
+        "file": "\\src\\test\\main-test-engine.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Navigating to radio button demo Page",
+            "fullTitle": "Test Suite One Navigating to radio button demo Page",
+            "timedOut": false,
+            "duration": 331,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
+            "err": {},
+            "isRoot": false,
+            "uuid": "45b3832e-35c6-4fea-9084-1d7eec99fe1d",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "click on the check box and verify the message",
+            "fullTitle": "Test Suite One click on the check box and verify the message",
+            "timedOut": false,
+            "duration": 146,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
+            "err": {},
+            "isRoot": false,
+            "uuid": "98b3d1bf-7f54-4a64-aee8-b61602307d72",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "45b3832e-35c6-4fea-9084-1d7eec99fe1d",
+          "98b3d1bf-7f54-4a64-aee8-b61602307d72"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 477,
         "root": false,
         "rootEmpty": false,
         "_timeout": 100000
