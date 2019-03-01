@@ -1,9 +1,9 @@
 
 import 'babel-polyfill';
-import { HomePage } from '../lib/homePage';
+import { BasePage } from '../lib/base-page';
 import { assert } from 'chai';
 
-const pageHome= new HomePage();
+const basePage = new BasePage();
 const addContext = require('mochawesome/addContext');
 
 function importTest(name, path) {
@@ -11,31 +11,25 @@ function importTest(name, path) {
         require(path);
     });
 }
-
-
-
 // var common = require("./module-one/checkbox-demo-test");
 
 describe("Mocha is a test framework and chai is the assertion library", async function () {
 
-  
     before('Launching the home page',async function() {
         let url = 'http://www.seleniumeasy.com/test/';
-        await pageHome.getHomePage(url);     
+        await basePage.getURL(url)
+        .then( async() => {
+            return await basePage.maximizeBrowser();
+        });     
     });
 
-    before('Verifying the homepage title',async function() {
-        let title = await pageHome.getTitle();
-        assert.equal(title,`Selenium Easy - Best Demo website to practice Selenium Webdriver Online`);
-        addContext(this, 'simple string');
-        
-     });  
-
-     afterEach(function () {
-        console.log("after all tests");
-    });
-
-    await importTest("Test Suite Two", './module-one/sample-demo-test');
-    await importTest("Test Suite One", './module-one/checkbox-demo-test');
-    await importTest("Test Suite One", './module-one/radiobutton-demo-test');
+    it("Verifying the homepage title", (async () => {
+        await basePage.getTitle()
+        .then((title) => assert.equal(title,`Selenium Easy - Best Demo website to practice Selenium Webdriver Online`)); 
+     }));
+    // await importTest("Sample Demo Input", './module-one/sample-demo-test');
+    // await importTest("Sample Demo Checkbox", './module-one/checkbox-demo-test');
+    // await importTest("Sample Demo Radio Button", './module-one/radiobutton-demo-test');
+    // await importTest("Sample demo drop-down-list", './module-one/drop-down-list');
+    await importTest("Sample demo submit form", './module-one/input-form-submit');
 });

@@ -1,26 +1,44 @@
-
 // 'use strict';
 import 'babel-polyfill';
-import { HomePage } from '../../lib/homePage';
-import { SampleDemo } from '../../lib/subPages/sampleDemo';
-import { assert } from 'chai';
+import { HomePage } from '../../lib/home-page';
+import { SampleDemo } from '../../lib/subPages/input-forms';
+import { assert, expect } from 'chai';
 
 const addContext = require('mochawesome/addContext');
-
 const pageHome= new HomePage();
 const pageSampleDemo = new SampleDemo();
 
-   
 it("Navigating to the Sample DemoPage", (async () => {
-   assert.isTrue(await pageHome.navigateSampleDemo(), 'Navigation falied');    
+   await pageHome.navigateSampleDemo()
+   .catch(async(err) => await assert.fail(err));  
 }));
 
-it("Enter the text in enter-message field and verify the message", (async () => {
-      let message = await pageSampleDemo.enterTextandGetValue('My Text');
-      assert.equal('My Text', message);   
+//Single Input Field
+it("Enter your message", (async () => {   
+   await pageSampleDemo.writeMessage('Text verification')
+   .catch(async(err) => await assert.fail(err)); 
+}));
+it("Click on Show Message button to display message entered in input field", (async () => {
+   await pageSampleDemo.clickShowMessage()
+   .catch(async(err) => await assert.fail(err));
+   
+}));
+it("Message Verification", (async () => {
+   const result = await pageSampleDemo.getMessage();
+   expect(result).to.equal('Text verification');    
 }));
 
-it("Enter the two numbers to get the toatl and verify", (async () => {
-   let result = await pageSampleDemo.addNumbertoGetTotal(2, 3);  
-   assert.equal(result, (2 + 3));          
+//Two Input Fields
+it("Enter Value for a and b", (async () => {   
+   await pageSampleDemo.enterTwoNumbers(4, 5)
+   .catch(async(err) => await expect.fail(err)); 
+}));
+it("Click on Show Message button to display message entered in input field", (async () => {
+   await pageSampleDemo.clickGetTotal()
+   .catch(async(err) => await expect.fail(err));
+   
+}));
+it("Message Verification", (async () => {
+   const result = await pageSampleDemo.getTotalOfTwoValues();
+   expect(parseInt(result)).to.equal(4 + 5); 
 }));
