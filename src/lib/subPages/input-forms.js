@@ -152,4 +152,5 @@ SampleDemo.prototype.clickGetValues = async function() {
 SampleDemo.prototype.getMultiRadioStatus = async function(blnGender) {
     return await this.getText(this.getSelectedValues(blnGender)); 
 }
+
 export  { SampleDemo }

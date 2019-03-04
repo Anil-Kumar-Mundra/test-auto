@@ -3,7 +3,7 @@
  * Dependencies. By, Until from selenium webdriver and driver form driver module.
  * 
  */
-import { By, until, promise } from 'selenium-webdriver';
+import { By, until, promise, Keys } from 'selenium-webdriver';
 import { driver} from './driver';
 /**
  *  BasePage constructor function. 
@@ -39,7 +39,10 @@ function BasePage() {
      * @param element is a locator object(bound with By)
      * @return {Promise}
      */  
-    this.getWebElement = async(element) =>  await driver.findElement(element);
+    this.getWebElement = async function(element) {        
+            return await driver.findElement(element)
+            .catch(() => driver.wait(until.elementLocated(element), 1000));
+    }
     /**
      * Close the current session
      * @return {Promise}
@@ -70,7 +73,8 @@ function BasePage() {
    this.getValue = async(objElement, attributeName) => {
        return await this.getWebElement(objElement)
        .then( async(obj) => {
-            return await obj.getAttribute(attributeName); 
+            return await obj.getAttribute(attributeName)
+            // .then((selected) => selected);
        });   
     }
     /**
@@ -113,8 +117,16 @@ function BasePage() {
      */  
     this.isSelected = async(obj) => { 
         return await this.getWebElement(obj)
-        .then(async (obj) =>  await obj.isSelected())        
-        .catch((err) =>console.log(err));  
+        .then(async obj =>  await obj.isSelected());
+    }
+    /**
+     * Get the check/uncheck options of checkbox/radio buttons
+     * @param element is a locator object(bind with By)
+     * @return {Boolean}
+     */  
+    this.isDisplayed= async(obj) => { 
+        return await this.getWebElement(obj)
+        .then(async obj =>  await obj.isDisplayed());
     }
     
     /**
@@ -122,7 +134,7 @@ function BasePage() {
      * 
      */ 
       
-     this.selectListValue = async (obj, listValue) => {
+    this.selectListValue = async (obj, listValue) => {
         await this.getWebElement(obj)
         .then(async (obj) => {
             await obj.click()
@@ -138,8 +150,27 @@ function BasePage() {
                 })
             })
         })  
-     }
-    
+    }
+
+    this.enterKeys= async(obj) => { 
+        return await this.getWebElement(obj)
+        .then(async obj =>  await obj.sendKeys(Keys.ENTER));
+    }
+
+    // this.selectListWithSearchText = async(selectObj, textObj, listValue) {
+    //     return await this.getWebElement(selectObj)
+    //     .then(async (obj) => {
+    //         return await obj.click()
+    //         .then(async() => {
+    //             return await this.getWebElement(textObj)
+    //             .then(async (obj) => {
+
+    //             })
+            
+    //         });
+    //     });
+    // }
+
 
 }).call(BasePage.prototype) //creating a prototype object && properties for BasePage object
 

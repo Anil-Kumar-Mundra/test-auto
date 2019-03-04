@@ -8,6 +8,8 @@ function HomePage() {
     this.radioButtonDemo = By.linkText(`Radio Buttons Demo`);
     this.selectDropdownList = By.linkText(`Select Dropdown List`);
     this.inputFormSubmit = By.linkText(`Input Form Submit`);
+    this.ajaxFormSubmit = By.linkText(`Ajax Form Submit`);
+    this.jquerySelectDropDown= By.linkText(`JQuery Select dropdown`);
 }
 HomePage.prototype = Object.create(BasePage.prototype);
 HomePage.prototype.navigateSampleDemo = async function()  {
@@ -39,6 +41,18 @@ HomePage.prototype.navigateInputFormSubmit = async function()  {
     return await this.clickWebElements(
        this.inputForms, 
        this.inputFormSubmit
+   ) 
+}
+HomePage.prototype.navigateAjaxFormSubmit = async function()  {
+    return await this.clickWebElements(
+       this.inputForms, 
+       this.ajaxFormSubmit
+   ) 
+}
+HomePage.prototype.navigateJQuerySelctDropDown = async function()  {
+    return await this.clickWebElements(
+       this.inputForms, 
+       this.jquerySelectDropDown
    ) 
 }
 export { HomePage }

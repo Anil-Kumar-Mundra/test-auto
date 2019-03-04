@@ -13,7 +13,7 @@ it("Navigating to drop-down-list demo Page", (async () => {
     .catch((err) => expect.fail(err));
  }));
 
- it("Selected value from the list will display below the dropdown", (async () => {
+it("Selected value from the list will display below the dropdown", (async () => {
     let arrayObj = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
         'Thursday', 'Friday', 'Saturday'];
     for(let element of arrayObj) {
@@ -21,11 +21,14 @@ it("Navigating to drop-down-list demo Page", (async () => {
         .then(async() => {            
             let results = await DropdownList.getListMessage();
             expect(results).to.equal(`Day selected :- ${element}`)
+        })
+        .catch((error) => {
+            throw new Error(error);
         });
     }
- }));
+}));
 
- it(`By clicking on the buttons, you can get value from the list which 
+it(`By clicking on the buttons, you can get value from the list which 
     will display just below the buttons`, (async () => {
     let arrSates= ['California', 'Florida', 'New Jersey', 'New York',
         'Ohio', 'Texas', 'Pennsylvania', 'Washington']

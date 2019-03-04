@@ -27,9 +27,11 @@ describe("Mocha is a test framework and chai is the assertion library", async fu
         await basePage.getTitle()
         .then((title) => assert.equal(title,`Selenium Easy - Best Demo website to practice Selenium Webdriver Online`)); 
      }));
-    // await importTest("Sample Demo Input", './module-one/sample-demo-test');
-    // await importTest("Sample Demo Checkbox", './module-one/checkbox-demo-test');
-    // await importTest("Sample Demo Radio Button", './module-one/radiobutton-demo-test');
-    // await importTest("Sample demo drop-down-list", './module-one/drop-down-list');
+    await importTest("Sample Demo Input", './module-one/sample-demo-test');
+    await importTest("Sample Demo Checkbox", './module-one/checkbox-demo-test');
+    await importTest("Sample Demo Radio Button", './module-one/radiobutton-demo-test');
+    await importTest("Sample demo drop-down-list", './module-one/drop-down-list');
     await importTest("Sample demo submit form", './module-one/input-form-submit');
+    await importTest("Sample demo ajax form", './module-one/ajax-form-submit');
+    await importTest("Sample demo jquery select", './module-one/jquery-select-dropdown');
 });

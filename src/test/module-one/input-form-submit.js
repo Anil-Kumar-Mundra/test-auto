@@ -29,7 +29,22 @@ it("Navigating to inout form submit page", (async () => {
    
     for (let [key, value] of Object.entries(objInputForm)) {
         await inputFormSubmit.writeInputFormFields(key, value)
-        .catch((err) => console.log(err));
-        // console.log(key, value);
+        .catch((err) => {
+            throw new Error(err);
+        });
     }
+    await inputFormSubmit.selectStateInputForm('Ohio')
+    .catch((err) => {
+        throw new Error(err);
+    });
+    await inputFormSubmit.selectHosting()
+    .catch((err) => {
+        throw new Error(err);
+    });  
+    await inputFormSubmit.submitForm()
+    .catch((err) => {
+        throw new Error(err);
+    });
+
+    throw new Error('Form has not been submitted completely');
  }));

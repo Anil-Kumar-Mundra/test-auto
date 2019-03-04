@@ -44,4 +44,3 @@ it("When you check all the checkboxes, button will change to check All", (async 
    let results = await CheckboxDemo.captureMulticheckboxStatus();
    expect(results).to.be.an('array').that.does.not.include(true);
 }));
-
