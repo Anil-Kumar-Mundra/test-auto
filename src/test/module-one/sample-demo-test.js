@@ -35,8 +35,7 @@ it("Enter Value for a and b", (async () => {
 }));
 it("Click on Show Message button to display message entered in input field", (async () => {
    await pageSampleDemo.clickGetTotal()
-   .catch(async(err) => await expect.fail(err));
-   
+   .catch(async(err) => await expect.fail(err));   
 }));
 it("Message Verification", (async () => {
    const result = await pageSampleDemo.getTotalOfTwoValues();

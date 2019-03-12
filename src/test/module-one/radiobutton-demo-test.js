@@ -9,7 +9,6 @@ const addContext = require('mochawesome/addContext');
 const pageHome= new HomePage();
 const RadioButtonDemo = new SampleDemo();
 
-
 it("Navigating to radio button demo Page", (async () => {
     await pageHome.navigateRadioButtonDemo()
     .catch((err) => expect.fail(err));
