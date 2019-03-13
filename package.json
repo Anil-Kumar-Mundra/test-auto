@@ -4,7 +4,12 @@
   "description": "continious test automation",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "mocha  --timeout 100000 --require babel-register"
+=======
+    "test": "mocha src/test/ --reporter mochawesome  --timeout 100000 --require babel-register",
+    "sonar-scanner":  "D:/sonar-scanner-3.3.0.1492-windows/bin/sonar-scanner.bat"
+>>>>>>> e7851ce8fc4bcaaa4a1c512307a46b47dec65f92
   },
   "author": "anil mundra",
   "license": "ISC",
@@ -21,6 +26,10 @@
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
+<<<<<<< HEAD
+=======
+    "mocha-junit-reporter": "^1.18.0",
+>>>>>>> e7851ce8fc4bcaaa4a1c512307a46b47dec65f92
     "mochawesome": "^3.1.1"
   }
 }
