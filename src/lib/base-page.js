@@ -132,8 +132,7 @@ function BasePage() {
     /**
      * Get the check/uncheck options of checkbox/radio buttons
      * 
-     */ 
-      
+     */      
     this.selectListValue = async (obj, listValue) => {
         await this.getWebElement(obj)
         .then(async (obj) => {
@@ -157,21 +156,7 @@ function BasePage() {
         .then(async obj =>  await obj.sendKeys(Keys.ENTER));
     }
 
-    // this.selectListWithSearchText = async(selectObj, textObj, listValue) {
-    //     return await this.getWebElement(selectObj)
-    //     .then(async (obj) => {
-    //         return await obj.click()
-    //         .then(async() => {
-    //             return await this.getWebElement(textObj)
-    //             .then(async (obj) => {
-
-    //             })
-            
-    //         });
-    //     });
-    // }
-
-
+    
 }).call(BasePage.prototype) //creating a prototype object && properties for BasePage object
 
 export{ BasePage }

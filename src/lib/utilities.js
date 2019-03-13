@@ -1,5 +1,5 @@
 
-const UtilComponent = function () { };
+const utilComponent = function () { };
 (function() {
     this.compare = function(arr1,arr2) {  
         if(!arr1  || !arr2) return
@@ -14,7 +14,12 @@ const UtilComponent = function () { };
             }
         }));
         return result       
+    },
+    this.runTest = async function (testName, suiteName) {
+        await describe(testName, async function () {            
+            await require(`../test/${suiteName}/${testName}`);
+        });
     }
-}).call(BasePage.prototype) //creating a prototype object && properties for BasePage object
+}).call(utilComponent.prototype) //creating a prototype object && properties for BasePage object
 
-export{ UtilComponent }
+export{ utilComponent }

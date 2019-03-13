@@ -1,0 +1,46 @@
+{
+    "testsuites" :
+    [ 
+        {
+            "name" : "module-one",
+            "id"  : 101,
+            "executionstatus" : true,
+            "tests" : {
+                "sample-demo-test" : true,
+                "checkbox-demo-test" : true,
+                "radiobutton-demo-test" : true
+            } 
+        },
+        {
+            "name" : "module-one",
+            "id"  : 102,
+            "executionstatus" : true,
+            "tests" : {
+                "drop-down-list" : true                
+            } 
+        },        
+        {
+            "name" : "module-one",
+            "id"  : 103,
+            "executionstatus" : true,
+            "tests" : {
+                "drop-down-list" : false,
+                "input-form-submit" : true,
+                "ajax-form-submit" : true,
+                "jquery-select-dropdown" : true
+            } 
+        },
+        {
+            "name" : "module-one",
+            "id"  : 104,
+            "executionstatus" : false,
+            "tests" : {
+                "drop-down-list" : true,
+                "input-form-submit" : true,
+                "ajax-form-submit" : true,
+                "jquery-select-dropdown" : true
+            } 
+        }
+    ]
+   
+}
