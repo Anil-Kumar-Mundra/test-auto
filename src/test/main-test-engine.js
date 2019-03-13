@@ -10,13 +10,6 @@ const addContext = require('mochawesome/addContext');
 const UtilComponent = new utilComponent();
 
 
-
-function runTest(name, path) {
-    describe(name, function () {
-        require(path);
-    });
-}
-
 describe("Mocha is a test framework and chai is the assertion library", async function () {
 
     before('Launching the home page',async function() {
