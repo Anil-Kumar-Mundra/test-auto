@@ -30,8 +30,8 @@ it("MongoDB delete recordset", (async () => {
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
         const dbo = db.db("lms_Systems");
-        const myquery = { name: "Rugby" };
-        const newvalues = { $set: {name: "golf" } };
+        const myquery = { name: "golf" };
+        const newvalues = { $set: {name: "Rugby" } };
         dbo.collection("sportsDetails").updateOne(myquery, newvalues, function(err, res) {
           if (err) throw err;
           console.log("1 document updated");
