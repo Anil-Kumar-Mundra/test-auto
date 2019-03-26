@@ -14,8 +14,8 @@ it("Navigate to Leave Balance Details", (async () => {
     let obj = await LeaveBalance.captureLeaveDetails();
     MongoClient.connect(url, function(err, db) {
       if (err) throw err;
-      const dbo = db.db("lms_details");     
-      dbo.collection("leaveDetails").insertOne(obj, function(err, res) {
+      const dbo = db.db("lms_Systems");     
+      dbo.collection("leaveBalance").insertOne(obj, function(err, res) {
         if (err) throw err;
         db.close();
       });

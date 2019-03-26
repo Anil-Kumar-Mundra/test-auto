@@ -16,7 +16,7 @@ it("MongoDB get recordset", (async () => {
 it("MongoDB delete recordset", (async () => {
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        const dbo = db.db("lms_details");
+        const dbo = db.db("lms_Systems");
         const myquery = { name : 'tennis', };
         dbo.collection("sportsDetails").deleteOne(myquery, function(err, obj) {
           if (err) throw err;
@@ -29,9 +29,9 @@ it("MongoDB delete recordset", (async () => {
  it("MongoDB update recordset", (async () => {
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        const dbo = db.db("lms_details");
-        const myquery = { name: "Rugby" };
-        const newvalues = { $set: {name: "golf" } };
+        const dbo = db.db("lms_Systems");
+        const myquery = { name: "golf" };
+        const newvalues = { $set: {name: "Rugby" } };
         dbo.collection("sportsDetails").updateOne(myquery, newvalues, function(err, res) {
           if (err) throw err;
           console.log("1 document updated");

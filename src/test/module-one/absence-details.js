@@ -17,8 +17,8 @@ it("Navigate to absence details", (async () => {
     let obj = await AbsenceDetails.captureAbsenceDetails();
     MongoClient.connect(url, function(err, db) {
       if (err) throw err;
-      const dbo = db.db("lms_details");     
-      dbo.collection("lmsRecords").insertOne(obj, function(err, res) {
+      const dbo = db.db("lms_Systems");     
+      dbo.collection("absenceDetails").insertOne(obj, function(err, res) {
         if (err) throw err;
         db.close();
       });

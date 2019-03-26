@@ -5,9 +5,9 @@
     "passes": 14,
     "pending": 0,
     "failures": 0,
-    "start": "2019-03-26T06:31:23.752Z",
-    "end": "2019-03-26T06:31:43.055Z",
-    "duration": 19303,
+    "start": "2019-03-26T07:43:04.213Z",
+    "end": "2019-03-26T07:43:23.404Z",
+    "duration": 19191,
     "testsRegistered": 14,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "a805d33e-b0e8-42f5-a52e-53124c94fdeb",
+    "uuid": "34f397c2-946e-498a-b0fb-a3c592778be8",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "d350402b-0af3-4066-ad8b-9852a7ee6c98",
+        "uuid": "ff1f123f-9cd1-4fc0-90a3-48fe0d850c24",
         "title": "Mocha is a test framework and chai is the assertion library",
         "fullFile": "D:\\newJSTestAutomation\\testAuomationWithJS\\src\\test\\main-test-engine.js",
         "file": "\\src\\test\\main-test-engine.js",
@@ -37,14 +37,14 @@
             "title": "\"before all\" hook: Launching the home page",
             "fullTitle": "Mocha is a test framework and chai is the assertion library \"before all\" hook: Launching the home page",
             "timedOut": false,
-            "duration": 7085,
+            "duration": 7670,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
             "err": {},
             "isRoot": false,
-            "uuid": "bc8b8840-dd3a-4b44-910a-4c461f509171",
+            "uuid": "797b1e4e-6e39-4ef7-9c2b-0f23e0c19366",
             "isHook": true,
             "skipped": false
           }
@@ -54,14 +54,14 @@
             "title": "\"after all\" hook: Logout LMS application",
             "fullTitle": "Mocha is a test framework and chai is the assertion library \"after all\" hook: Logout LMS application",
             "timedOut": false,
-            "duration": 3359,
+            "duration": 3505,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
             "err": {},
             "isRoot": false,
-            "uuid": "0c9b6393-f8ac-4f35-92e4-bce37f8855d1",
+            "uuid": "f981ed40-8cfa-46d9-a819-910c0ad6ef43",
             "isHook": true,
             "skipped": false
           }
@@ -71,7 +71,7 @@
             "title": "Verifying the homepage title",
             "fullTitle": "Mocha is a test framework and chai is the assertion library Verifying the homepage title",
             "timedOut": false,
-            "duration": 10,
+            "duration": 9,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -80,14 +80,14 @@
             "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
             "err": {},
             "isRoot": false,
-            "uuid": "a3d5ffc0-4044-4d15-a894-99d8ca847aed",
+            "uuid": "ec904295-aebf-4875-bdbe-917da495b000",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [
           {
-            "uuid": "91539ee1-8fc0-4481-ae27-0198b4b4d19f",
+            "uuid": "334a1784-2cc1-442c-97b3-4efa5784221c",
             "title": "login-page",
             "fullFile": "D:\\newJSTestAutomation\\testAuomationWithJS\\src\\test\\main-test-engine.js",
             "file": "\\src\\test\\main-test-engine.js",
@@ -98,7 +98,7 @@
                 "title": "Enter User Name and password",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library login-page Enter User Name and password",
                 "timedOut": false,
-                "duration": 228,
+                "duration": 196,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -107,7 +107,7 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "f400c63f-2bc3-42bd-b023-37d595c46820",
+                "uuid": "15ef1620-f541-486f-9dcb-87c918b84e42",
                 "isHook": false,
                 "skipped": false
               },
@@ -115,7 +115,7 @@
                 "title": "Login to LMS",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library login-page Login to LMS",
                 "timedOut": false,
-                "duration": 628,
+                "duration": 519,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -124,7 +124,7 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "661566b7-687a-415a-8de3-c7b666887c53",
+                "uuid": "b746b2e7-48ab-4498-b06b-9a2051d7d830",
                 "isHook": false,
                 "skipped": false
               },
@@ -132,36 +132,36 @@
                 "title": "Validate Login",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library login-page Validate Login",
                 "timedOut": false,
-                "duration": 94,
+                "duration": 62,
                 "state": "passed",
-                "speed": "slow",
+                "speed": "medium",
                 "pass": true,
                 "fail": false,
                 "pending": false,
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "53acdf80-ca31-43c2-9215-593d13f3106a",
+                "uuid": "d4a23249-7a98-40e5-92fb-205d1f5b506a",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "f400c63f-2bc3-42bd-b023-37d595c46820",
-              "661566b7-687a-415a-8de3-c7b666887c53",
-              "53acdf80-ca31-43c2-9215-593d13f3106a"
+              "15ef1620-f541-486f-9dcb-87c918b84e42",
+              "b746b2e7-48ab-4498-b06b-9a2051d7d830",
+              "d4a23249-7a98-40e5-92fb-205d1f5b506a"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 950,
+            "duration": 777,
             "root": false,
             "rootEmpty": false,
             "_timeout": 100000
           },
           {
-            "uuid": "e2331874-48fa-4b49-b583-a073c89a1db4",
+            "uuid": "fd3764ca-8486-415c-be6e-a05480cde93e",
             "title": "absence-details",
             "fullFile": "D:\\newJSTestAutomation\\testAuomationWithJS\\src\\test\\main-test-engine.js",
             "file": "\\src\\test\\main-test-engine.js",
@@ -172,7 +172,7 @@
                 "title": "Navigate to absence details",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library absence-details Navigate to absence details",
                 "timedOut": false,
-                "duration": 635,
+                "duration": 602,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -181,7 +181,7 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "e7f5fa7c-68d5-4b53-98d7-e95724cccdb7",
+                "uuid": "c7894636-3700-4e05-8bc9-feeded171dc2",
                 "isHook": false,
                 "skipped": false
               },
@@ -189,7 +189,7 @@
                 "title": "Get Row Count",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library absence-details Get Row Count",
                 "timedOut": false,
-                "duration": 1151,
+                "duration": 970,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -198,26 +198,26 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "fbd02655-2e02-43d9-9406-9d06af046bc5",
+                "uuid": "aceb2209-f195-4286-b416-60f229b2db14",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "e7f5fa7c-68d5-4b53-98d7-e95724cccdb7",
-              "fbd02655-2e02-43d9-9406-9d06af046bc5"
+              "c7894636-3700-4e05-8bc9-feeded171dc2",
+              "aceb2209-f195-4286-b416-60f229b2db14"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 1786,
+            "duration": 1572,
             "root": false,
             "rootEmpty": false,
             "_timeout": 100000
           },
           {
-            "uuid": "3744fef1-009a-4715-95a7-034782aee1e4",
+            "uuid": "ad7ee67d-de4b-419f-bacd-f10a84962dad",
             "title": "leave-balance",
             "fullFile": "D:\\newJSTestAutomation\\testAuomationWithJS\\src\\test\\main-test-engine.js",
             "file": "\\src\\test\\main-test-engine.js",
@@ -228,7 +228,7 @@
                 "title": "Navigate to Leave Balance Details",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library leave-balance Navigate to Leave Balance Details",
                 "timedOut": false,
-                "duration": 313,
+                "duration": 470,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -237,7 +237,7 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "7b770cad-2004-4b01-956c-b857dcc0db6c",
+                "uuid": "5ed848d8-11c3-4b67-a5b5-564b349937e5",
                 "isHook": false,
                 "skipped": false
               },
@@ -245,7 +245,7 @@
                 "title": "Capture Leave Balance Details",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library leave-balance Capture Leave Balance Details",
                 "timedOut": false,
-                "duration": 1032,
+                "duration": 861,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -254,26 +254,26 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "df8b35d6-7022-4551-9ec4-340620aa033f",
+                "uuid": "5a54187e-7be9-491b-bc41-0cec183b7269",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "7b770cad-2004-4b01-956c-b857dcc0db6c",
-              "df8b35d6-7022-4551-9ec4-340620aa033f"
+              "5ed848d8-11c3-4b67-a5b5-564b349937e5",
+              "5a54187e-7be9-491b-bc41-0cec183b7269"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 1345,
+            "duration": 1331,
             "root": false,
             "rootEmpty": false,
             "_timeout": 100000
           },
           {
-            "uuid": "643e34bd-9d71-474c-9144-8b0da5592e86",
+            "uuid": "e5a78a9d-11ff-43ad-b00d-961f1b4cdfec",
             "title": "apply-leaves",
             "fullFile": "D:\\newJSTestAutomation\\testAuomationWithJS\\src\\test\\main-test-engine.js",
             "file": "\\src\\test\\main-test-engine.js",
@@ -284,7 +284,7 @@
                 "title": "Navigate to Apply Leave",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library apply-leaves Navigate to Apply Leave",
                 "timedOut": false,
-                "duration": 351,
+                "duration": 249,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -293,7 +293,7 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "6d1d4f7e-c0c4-4300-9768-509bdc1320bf",
+                "uuid": "ceb97309-06f8-4fb3-bd58-9d9803771edd",
                 "isHook": false,
                 "skipped": false
               },
@@ -301,7 +301,7 @@
                 "title": "Enter Leave Details",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library apply-leaves Enter Leave Details",
                 "timedOut": false,
-                "duration": 1258,
+                "duration": 690,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -310,7 +310,7 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "b00ad350-45c7-4124-8591-f213e27ad7ad",
+                "uuid": "a4be8eaa-974d-4e25-8730-f87c470c8649",
                 "isHook": false,
                 "skipped": false
               },
@@ -318,7 +318,7 @@
                 "title": "Wait for total duration value",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library apply-leaves Wait for total duration value",
                 "timedOut": false,
-                "duration": 3090,
+                "duration": 3322,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -327,27 +327,27 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "3b4a7874-9e8c-47a8-adc0-c1ba204828ed",
+                "uuid": "1bcc5ac8-a1f3-4aa0-a9ce-f2a0e9711567",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "6d1d4f7e-c0c4-4300-9768-509bdc1320bf",
-              "b00ad350-45c7-4124-8591-f213e27ad7ad",
-              "3b4a7874-9e8c-47a8-adc0-c1ba204828ed"
+              "ceb97309-06f8-4fb3-bd58-9d9803771edd",
+              "a4be8eaa-974d-4e25-8730-f87c470c8649",
+              "1bcc5ac8-a1f3-4aa0-a9ce-f2a0e9711567"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 4699,
+            "duration": 4261,
             "root": false,
             "rootEmpty": false,
             "_timeout": 100000
           },
           {
-            "uuid": "e3b84eea-24d5-418b-a3ee-d2f66256ad32",
+            "uuid": "d7e3a164-8637-4a9e-8468-64ab3b758293",
             "title": "mongoDB-find",
             "fullFile": "D:\\newJSTestAutomation\\testAuomationWithJS\\src\\test\\main-test-engine.js",
             "file": "\\src\\test\\main-test-engine.js",
@@ -358,7 +358,7 @@
                 "title": "MongoDB get recordset",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library mongoDB-find MongoDB get recordset",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 3,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -367,7 +367,7 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "cb860f7c-bf3a-417d-96cf-ae0a9faba99c",
+                "uuid": "6a293913-e495-41c4-98a5-5c5237478736",
                 "isHook": false,
                 "skipped": false
               },
@@ -384,7 +384,7 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "902eb56a-b7f6-4c7d-b570-bdbd9d266952",
+                "uuid": "ed12f903-80a6-4615-a73f-f9608d42cd38",
                 "isHook": false,
                 "skipped": false
               },
@@ -392,7 +392,7 @@
                 "title": "MongoDB update recordset",
                 "fullTitle": "Mocha is a test framework and chai is the assertion library mongoDB-find MongoDB update recordset",
                 "timedOut": false,
-                "duration": 2,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -401,33 +401,33 @@
                 "code": "var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "9cbd0e1c-b9d4-42b0-ae20-481829cbaf5c",
+                "uuid": "af1da339-5688-4107-be33-b5fdc225b2b3",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "cb860f7c-bf3a-417d-96cf-ae0a9faba99c",
-              "902eb56a-b7f6-4c7d-b570-bdbd9d266952",
-              "9cbd0e1c-b9d4-42b0-ae20-481829cbaf5c"
+              "6a293913-e495-41c4-98a5-5c5237478736",
+              "ed12f903-80a6-4615-a73f-f9608d42cd38",
+              "af1da339-5688-4107-be33-b5fdc225b2b3"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 4,
+            "duration": 5,
             "root": false,
             "rootEmpty": false,
             "_timeout": 100000
           }
         ],
         "passes": [
-          "a3d5ffc0-4044-4d15-a894-99d8ca847aed"
+          "ec904295-aebf-4875-bdbe-917da495b000"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 10,
+        "duration": 9,
         "root": false,
         "rootEmpty": false,
         "_timeout": 100000
