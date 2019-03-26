@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha src/test/ --reporter mochawesome  --timeout 100000 --require babel-register",
-    "sonar-scanner":  "D:/sonar-scanner-3.3.0.1492-windows/bin/sonar-scanner.bat"
+    "sonar-scanner": "D:/sonar-scanner-3.3.0.1492-windows/bin/sonar-scanner.bat"
   },
   "author": "anil mundra",
   "license": "ISC",
   "dependencies": {
     "@types/selenium-webdriver": "^3.0.10",
     "express": "^4.16.4",
+    "mongodb": "^3.2.2",
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {

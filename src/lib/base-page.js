@@ -41,8 +41,18 @@ function BasePage() {
      */  
     this.getWebElement = async function(element) {        
             return await driver.findElement(element)
-            .catch(() => driver.wait(until.elementLocated(element), 1000));
+            .catch(() => driver.wait(until.elementLocated(element), 5000));
     }
+    /**
+     * Get the mutiple elements using locator objects
+     * @param element is a locator object(bound with By)
+     * @return {Promise}
+     */  
+    this.getWebElements = async function(element) {        
+        return await driver.findElements(element)
+        .then((elemnts) => elemnts)
+        .catch(() => driver.wait(until.elementLocated(element), 5000));
+}
     /**
      * Close the current session
      * @return {Promise}
@@ -154,6 +164,60 @@ function BasePage() {
     this.enterKeys= async(obj) => { 
         return await this.getWebElement(obj)
         .then(async obj =>  await obj.sendKeys(Keys.ENTER));
+    }
+
+    this.findChildsWithTagName = async(obj, childTagName) => {
+        return await obj.findElements(By.tagName(childTagName))
+        .then((objElements) => objElements);
+    }
+
+    this.getCellText = async(obj) => {
+        return await obj.getText()
+        .then((text) => text);
+    }
+
+    this.webTable = async(obj) => {
+        const objTable = {};
+        let rowCnt = -1;
+        let headerCnt = -1;
+        let columnCnt = -1;
+        /* Get web table row, header and column count */
+        let rowsObj = await this.getWebElements(obj);
+        rowCnt = rowsObj.length;
+        await rowsObj[0].findElements(By.tagName('th'))
+        .then((headerElements) => headerCnt = headerElements.length);
+        await rowsObj[1].findElements(By.tagName('td'))
+        .then((columElements) => columnCnt = columElements.length);
+        
+         
+            
+            for(let i = 0; i < columnCnt; i++) {
+                let propertyName = '';
+                let objArray=[];
+                await rowsObj[0].findElements(By.tagName('th'))
+                .then(async(headerElements) => {                                     
+                    propertyName = await this.getCellText(headerElements[i]);
+                });
+                for(let j = 1; j < rowCnt; j++) {
+                    await rowsObj[j].findElements(By.tagName('td'))
+                    .then(async(colElements) => {                                     
+                     objArray.push(await this.getCellText(colElements[i]));
+                    });
+                }
+                
+                objTable[propertyName] = objArray;
+            }            
+
+        return {
+            rowCount: rowCnt,
+            headerCount: headerCnt,
+            columnCount : columnCnt,
+            getDataObject: objTable
+        }
+    }    
+
+    this.staticWait = async function() {
+        await this.driver.sleep(3000);
     }
 
     
