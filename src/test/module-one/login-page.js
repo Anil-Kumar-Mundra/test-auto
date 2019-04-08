@@ -1,10 +1,15 @@
 import 'babel-polyfill';
 import { EntryPage } from '../../lib/subPages/main-page';
-import { expect} from 'chai';
+import { expect } from 'chai';
+import { Credentials } from '../credentials-properties';
 
+const LoginDetails = new Credentials();
 const LoginPage = new EntryPage();
+
 it("Enter User Name and password", (async () => {
-    await LoginPage.wrtiteUserNamePassword(`amundra@teksystems.com`, `Moukim21*`)
+   await LoginPage.wrtiteUserNamePassword(
+       LoginDetails.userName,
+       LoginDetails.password)
     .catch((err) => expect.fail(err));
  }));
  it("Login to LMS", (async () => {

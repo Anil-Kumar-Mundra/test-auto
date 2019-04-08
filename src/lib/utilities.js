@@ -24,7 +24,7 @@ const utilComponent = function () { };
         });
     },
     this.getRecordArrayMongoDB = async function(dbName, collectionName) {
-        
+        const obj =[];
         await MongoClient.connect(url, async function(err, db) {
             if (err) throw err;
             const dbo = db.db(dbName);            

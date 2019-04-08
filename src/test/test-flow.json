@@ -21,10 +21,10 @@
             "executionstatus" : true,
             "tests" : {
                 "login-page" : true,
-                "absence-details": true,
-                "leave-balance": true,
-                "apply-leaves": true,
-                "mongoDB-find" : true
+                "absence-details": false,
+                "leave-balance": false,
+                "apply-leaves": false,
+                "mongoDB-find" : false
             } 
         }
     ]
