@@ -36,6 +36,19 @@ const utilComponent = function () { };
             });  
         });
         
+    },
+
+    this.sampleDemo = function() {
+        this.blnFlag = false;
+        try {
+            if(true){
+                this.blnFlag = true;
+            }
+        }catch(err) {
+            console.log(err);
+        }finally {
+            return this.blnFlag;
+        }
     }
 }).call(utilComponent.prototype) //creating a prototype object && properties for BasePage object
 
